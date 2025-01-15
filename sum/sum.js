@@ -14,7 +14,7 @@ function sumOfMarked() {
                 cells[i].style.backgroundColor = "";
                 sum -= parseInt(cells[i].textContent);
             } else {
-                cells[i].style.backgroundColor = "blue";
+                cells[i].style.backgroundColor = "pink";
                 sum += parseInt(cells[i].textContent);
             }
             sumMarkedBox.textContent = sum;
