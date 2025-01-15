@@ -6,7 +6,7 @@ function addCellEventListeners() {
             let count = 0;
             for (let j = 0; j < cells.length; j++) {
                 if (cells[j].textContent === number) {
-                    cells[j].style.backgroundColor = "#0e4c93";
+                    cells[j].style.backgroundColor = "#0e4c92";
                     count++;
                 } else {
                     cells[j].style.backgroundColor = "";
