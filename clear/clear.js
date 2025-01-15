@@ -3,15 +3,15 @@ function addCellEventListeners() {
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("mouseover", function () {
             if (cells[i].clicked) {
-                cells[i].style.backgroundColor = "#0e4c99";
+                cells[i].style.backgroundColor = "#0e4c92";
             } else {
-                cells[i].style.backgroundColor = "#7285a0";
+                cells[i].style.backgroundColor = "#7285a5";
             }
         });
 
         cells[i].addEventListener("mouseout", function () {
             if (cells[i].clicked) {
-                cells[i].style.backgroundColor = "#131e8a";
+                cells[i].style.backgroundColor = "#131e3a";
             } else {
                 cells[i].style.backgroundColor = "";
             }
