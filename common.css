@@ -33,11 +33,11 @@ a:hover {
     background-color: pink;
     padding: 10px;
     border-radius: 15px;
-    box-shadow: 1px 1px 1px 1px #131e3a
+    box-shadow: 1px 1px 1px 1px  rgb(183, 84, 100);
 }
 
 .home-links:hover {
-    background-color:rgb(183, 84, 100);
+    background-color:rgb(216, 106, 132);
 }
 
 .home-links:active {
@@ -100,7 +100,7 @@ a:hover {
 
 h2 {
     font-size: 25px;
-    color: #d25899;
+    color: rgb(163, 49, 110);
 }
 
 .wantMargin {
