@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "silk";
+    src: url(Silkscreen/Silkscreen-Regular.ttf);
+}
+
+body {
+    font-family: "silk";
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #131e3a;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.home-links {
+    font-size: 30px;
+    color: lightblue;
+    background-color: darkcyan;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px #131e3a
+}
+
+.home-links:hover {
+    background-color: #7285a5;
+}
+
+.home-links:active {
+    box-shadow: none;
+}
+
+.home-button {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#numbers {
+    display: flex;
+    height: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(19, 50px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.cell {
+    background-color: darkcyan;
+    width: 15px;
+    height: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    box-shadow: 1px 1px 1px 1px #131e3a;
+
+}
+
+.cell:hover {
+    background-color: #7285a5;
+}
+
+.cell:active {
+    box-shadow: none;
+}
+
+.boxes {
+    display: flex;
+    border: 1px solid darkcyan;
+    border-radius: 4px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+h2 {
+    font-size: 25px;
+    color: #131e3a;
+}
+
+.wantMargin {
+    margin: 10px 0;
+}
