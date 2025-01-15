@@ -5,7 +5,7 @@
 
 body {
     font-family: "silk";
-    background-color: lightblue;
+    background-color: lightpink;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #131e3a;
+    color: rgb(183, 84, 100);
 }
 
 a:hover {
@@ -29,15 +29,15 @@ a:hover {
 
 .home-links {
     font-size: 30px;
-    color: lightblue;
-    background-color: darkcyan;
+    color: rgb(183, 84, 100);
+    background-color: pink;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 1px 1px 1px 1px #131e3a
 }
 
 .home-links:hover {
-    background-color: #7285a5;
+    background-color:rgb(183, 84, 100);
 }
 
 .home-links:active {
@@ -66,22 +66,22 @@ a:hover {
 }
 
 .cell {
-    background-color: darkcyan;
+    background-color: lightpink;
     width: 15px;
     height: 15px;
     padding: 20px;
     border-radius: 5px;
-    color: lightblue;
+    color:  rgb(183, 84, 100);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 22px;
-    box-shadow: 1px 1px 1px 1px #131e3a;
+    box-shadow: 1px 1px 1px 1px rgb(183, 84, 100);
 
 }
 
 .cell:hover {
-    background-color: #7285a5;
+    background-color: #df5b8b;
 }
 
 .cell:active {
@@ -90,7 +90,7 @@ a:hover {
 
 .boxes {
     display: flex;
-    border: 1px solid darkcyan;
+    border: 1px solid rgb(163, 49, 110);
     border-radius: 4px;
     text-align: center;
     justify-content: center;
@@ -100,7 +100,7 @@ a:hover {
 
 h2 {
     font-size: 25px;
-    color: #131e3a;
+    color: #d25899;
 }
 
 .wantMargin {

@@ -10,11 +10,11 @@ function sumOfMarked() {
     let cells = document.querySelectorAll("#grid .cell");
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("click", function () {
-            if (cells[i].style.backgroundColor === "navy") {
+            if (cells[i].style.backgroundColor === "pink") {
                 cells[i].style.backgroundColor = "";
                 sum -= parseInt(cells[i].textContent);
             } else {
-                cells[i].style.backgroundColor = "navy";
+                cells[i].style.backgroundColor = "pink";
                 sum += parseInt(cells[i].textContent);
             }
             sumMarkedBox.textContent = sum;
