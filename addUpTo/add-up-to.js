@@ -9,8 +9,8 @@ div.appendChild(addInput);
 div.appendChild(finderButton);
 
 addUp.textContent = "Add up to:";
-finderButton.textContent = "Find to cells that add up";
-addInput.value = "179";
+finderButton.textContent = "Find to cells that add";
+addInput.value = "189";
 
 div.setAttribute("id", "numbers");
 div.setAttribute("class", "wantMargin");
