@@ -41,9 +41,6 @@ a:hover {
     background-color:rgb(216, 106, 132);
 }
 
-.home-links:active {
-    box-shadow: none;
-}
 
 .home-button {
     text-align: center;
