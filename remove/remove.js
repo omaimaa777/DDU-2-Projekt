@@ -4,7 +4,7 @@ function highlightMatchingCells(number) {
         if (cells[i].textContent === "X") {
             cells[i].style.backgroundColor = "#131e3a";
         } else if (parseInt(cells[i].textContent) === number) {
-            cells[i].style.backgroundColor = "#0e4c99";
+            cells[i].style.backgroundColor = "#0e4c92";
         } else {
             cells[i].style.backgroundColor = "";
         }
