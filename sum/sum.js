@@ -6,24 +6,25 @@ function sumOfAll() {
     sumAllBox.textContent = sumTotal;
 }
 
-function sumOfMarked() {
+function setupMarkedNumberSum() {
     let cells = document.querySelectorAll("#grid .cell");
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("click", function () {
-            if (cells[i].style.backgroundColor === "pink") {
+            if (cells[i].style.backgroundColor === "lightblue") {
                 cells[i].style.backgroundColor = "";
                 sum -= parseInt(cells[i].textContent);
             } else {
-                cells[i].style.backgroundColor = "pink";
+                cells[i].style.backgroundColor = "lightblue";
                 sum += parseInt(cells[i].textContent);
             }
-            sumMarkedBox.textContent = sum;
+
             if (sum === 0) {
                 sumMarkedBox.textContent = " - ";
+            } else {
+                sumMarkedBox.textContent = sum;
             }
         });
     }
-
 }
 
 const sumContainerTop = document.createElement("div");
@@ -33,15 +34,22 @@ const sumAllBox = document.createElement("div");
 const h2Marked = document.createElement("h2");
 const sumMarkedBox = document.createElement("div");
 const resetButton = document.createElement("button");
+
 let sum = 0;
 
 body.insertBefore(sumContainerTop, grid);
 body.insertBefore(sumContainerBottom, grid);
+
 sumContainerTop.appendChild(h2All);
 sumContainerTop.appendChild(sumAllBox);
 sumContainerBottom.appendChild(h2Marked);
 sumContainerBottom.appendChild(sumMarkedBox);
 sumContainerBottom.appendChild(resetButton);
+
+sumContainerTop.setAttribute("class", "sum-container");
+sumContainerBottom.setAttribute("class", "sum-container");
+sumAllBox.setAttribute("class", "boxes");
+sumMarkedBox.setAttribute("class", "boxes");
 
 h2All.textContent = "Sum of all numbers";
 h2Marked.textContent = "Sum of marked";
@@ -49,24 +57,18 @@ resetButton.textContent = "Reset";
 sumAllBox.textContent = " - ";
 sumMarkedBox.textContent = " - ";
 
-sumContainerTop.setAttribute("class", "sum-container");
-sumContainerBottom.setAttribute("class", "sum-container");
-sumAllBox.setAttribute("class", "boxes");
-sumMarkedBox.setAttribute("class", "boxes");
-
 sumOfAll();
-sumOfMarked();
+setupMarkedNumberSum();
 
 createButton.addEventListener("click", function () {
     sumOfAll();
-    sumOfMarked();
+    setupMarkedNumberSum();
     sumMarkedBox.textContent = " - ";
     sum = 0;
 });
 
 resetButton.addEventListener("click", function () {
-    resetGrid(function () {
-        sumMarkedBox.textContent = " - ";
-        sum = 0;
-    });
+    resetGrid();
+    sumMarkedBox.textContent = " - ";
+    sum = 0;
 });

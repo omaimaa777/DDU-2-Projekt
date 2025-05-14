@@ -1,17 +1,17 @@
-function addCellEventListeners() {
+function setupClearCells() {
     let cells = document.querySelectorAll("#grid .cell");
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("mouseover", function () {
             if (cells[i].clicked) {
-                cells[i].style.backgroundColor = "#0e4c92";
+                cells[i].style.backgroundColor = "salmon";
             } else {
-                cells[i].style.backgroundColor = "#7285a5";
+                cells[i].style.backgroundColor = "lightblue";
             }
         });
 
         cells[i].addEventListener("mouseout", function () {
             if (cells[i].clicked) {
-                cells[i].style.backgroundColor = "#131e3a";
+                cells[i].style.backgroundColor = "lightcoral";
             } else {
                 cells[i].style.backgroundColor = "";
             }
@@ -23,7 +23,7 @@ function addCellEventListeners() {
                 cells[i].textContent = array[i];
                 cells[i].clicked = false;
             } else {
-                cells[i].style.backgroundColor = "#0e4c92";
+                cells[i].style.backgroundColor = "lightcoral";
                 cells[i].textContent = "";
                 cells[i].clicked = true;
             }
@@ -32,9 +32,13 @@ function addCellEventListeners() {
 }
 
 const clearButton = document.createElement("button");
+
 body.insertBefore(clearButton, grid);
-clearButton.textContent = "Fill Cleared";
+
+clearButton.textContent = "Restore All Numbers";
 clearButton.setAttribute("class", "wantMargin");
+
+setupClearCells();
 
 clearButton.addEventListener("click", function () {
     const cells = document.querySelectorAll("#grid .cell");
@@ -45,8 +49,6 @@ clearButton.addEventListener("click", function () {
     }
 });
 
-addCellEventListeners();
-
 createButton.addEventListener("click", function () {
-    addCellEventListeners();
+    setupClearCells();
 });
