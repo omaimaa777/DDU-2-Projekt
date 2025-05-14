@@ -1,3 +1,11 @@
+newRandomNumber.addEventListener("click", function () {
+    randomNum = randomNumber();
+    numberBox.textContent = randomNum;
+    highlightMatchingCells(randomNum);
+    removeBox.textContent = " - ";
+});
+
+
 function highlightMatchingCells(number) {
     let cells = document.querySelectorAll("#grid .cell");
     for (let i = 0; i < cells.length; i++) {
@@ -46,12 +54,6 @@ numberBox.textContent = " - ";
 newRandomNumber.textContent = "New random number";
 removeButton.textContent = "Remove";
 
-newRandomNumber.addEventListener("click", function () {
-    randomNum = randomNumber();
-    numberBox.textContent = randomNum;
-    highlightMatchingCells(randomNum);
-    removeBox.textContent = " - ";
-});
 
 removeButton.addEventListener("click", function () {
     let numberToRemove = parseInt(numberBox.textContent);
